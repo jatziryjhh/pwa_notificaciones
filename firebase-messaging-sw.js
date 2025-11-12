@@ -4,12 +4,12 @@ importScripts("https://www.gstatic.com/firebasejs/10.12.2/firebase-messaging-com
 
 // Configuración igual que en app.js
 firebase.initializeApp({
-    apiKey: "TU_API_KEY",
-    authDomain: "TU_AUTH_DOMAIN",
-    projectId: "TU_PROJECT_ID",
-    storageBucket: "TU_STORAGE_BUCKET",
-    messagingSenderId: "TU_SENDER_ID",
-    appId: "TU_APP_ID"
+    apiKey: "AIzaSyAuOt9gfMOn-MSseWD_vwURDrIazXF8Y3I",
+    authDomain: "pwa-10b-i20223tn062.firebaseapp.com",
+    projectId: "pwa-10b-i20223tn062",
+    storageBucket: "pwa-10b-i20223tn062.firebasestorage.app",
+    messagingSenderId: "814458029901",
+    appId: "1:814458029901:web:693998eea3007dccd31904"
 });
 
 const messaging = firebase.messaging();
@@ -19,7 +19,7 @@ messaging.onBackgroundMessage((payload) => {
     const title = payload.notification?.title || "Notificación";
     const options = {
         body: payload.notification?.body || "",
-        icon: "/icon-192.png"
+        icon: "./icon-192.png"
     };
     self.registration.showNotification(title, options);
 });
